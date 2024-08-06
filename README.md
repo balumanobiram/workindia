@@ -44,7 +44,7 @@ This is a Flask-based API for managing car rentals. The API allows users to log 
        current_city text,
        rent_per_hr integer,
        rent_history jsonb
-   );
+   )
 
    CREATE TABLE public.userlogin_details
    (
@@ -52,7 +52,8 @@ This is a Flask-based API for managing car rentals. The API allows users to log 
        password text,
        email text,
        user_id integer,
-   );
+   )
+
 
 
    
