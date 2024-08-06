@@ -33,8 +33,7 @@ This is a Flask-based API for managing car rentals. The API allows users to log 
     'password': 'password'
    }
 
-2.**Create the following tables**
-
+2. **Create the following tables**
    ```sh
    CREATE TABLE public.car_data
    (
@@ -54,6 +53,41 @@ This is a Flask-based API for managing car rentals. The API allows users to log 
        user_id integer,
    )
 
+## Testing
+
+1. Run the following in the POSTMAN
+
+```sh
+
+1.POST http://localhost:8000/api/signup
+
+body:{
+    "username":"example_user",
+    "password":"example_pass",
+    "email":"example_email"
+}
+
+2.POST  http://localhost:8000//api/login
+
+body:{
+    "username":"example_user",
+    "password":"example_pass"
+}
+
+3.POST http://localhost:8000/api/car/create
+
+header:{"API-Key":"123456balu"}
+
+body:{
+ "category": "SUV",
+ "model": "BMW Q3",
+ "number_plate": "KA1234",
+ "current_city": "bangalore",
+ "rent_per_hr": 100,
+ "rent_history": []
+ }
+
+4. GET http://localhost:8000 /api/car/get-rides?origin=banglore&destination=mumbai&category=SUV&required_hours=10
 
 
    
