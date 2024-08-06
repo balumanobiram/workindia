@@ -13,5 +13,46 @@ This is a Flask-based API for managing car rentals. The API allows users to log 
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/car-rental-api.git
-   cd car-rental-api
+   git clone https://github.com/balumanobiram/workindia
+2. **Install the dependencies:**
+
+   ```sh
+   pip install Flask psycopg2
+
+## Configuration
+
+1. **Database Configuration**
+
+   In the file dbprop.json change the properties of the database
+
+   ```sh
+   {
+    'host': 'localhost',
+    'database': 'database_name',
+    'user': 'username',
+    'password': 'password'
+   }
+
+2.**Create the following tables**
+
+   ```sh
+   CREATE TABLE public.car_data
+   (
+       category text,
+       model text,
+       number_plate text,
+       current_city text,
+       rent_per_hr integer,
+       rent_history jsonb
+   );
+
+   CREATE TABLE public.userlogin_details
+   (
+       username text,
+       password text,
+       email text,
+       user_id integer,
+   );
+
+
+   
