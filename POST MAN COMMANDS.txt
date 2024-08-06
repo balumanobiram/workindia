@@ -1,0 +1,36 @@
+POST MAN COMMANDS
+
+1.POST http://localhost:8000/api/signup
+{
+    "username":"example_user",
+    "password":"example_pass",
+    "email":"example_email"
+}
+
+2.POST  http://localhost:8000//api/login
+
+{
+    "username":"example_user",
+    "password":"example_pass"
+}
+
+3.POST http://localhost:8000/api/car/create
+
+header:{"API-Key":"123456balu"}
+
+{
+ "category": "SUV",
+ "model": "BMW Q3",
+ "number_plate": "KA1234",
+ "current_city": "bangalore",
+ "rent_per_hr": 100,
+ "rent_history": []
+ }
+
+4. GET http://localhost:8000 /api/car/get-rides?origin=banglore&destination=mumbai&category=SUV&required_hours=10
+
+
+
+
+
+
